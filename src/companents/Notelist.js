@@ -1,4 +1,5 @@
 import { useState } from "react"
+import AddNote from "./AddNote";
 
 const Notelist = ()=> {
 
@@ -10,8 +11,8 @@ const [notes,setNotes]= useState ([
 
 ]);
 
-const Addnote = ()=> {
-    setNotes ([...notes,{id:4 , title: " Note 4"} ])
+const NewNote = (title)=> {
+    setNotes ([...notes,{id:3 , title: title} ])
 }
 
 return (
@@ -22,6 +23,7 @@ return (
     {notes.map(note => {
         return (  
             <li key={note.id}>
+              
                 {note.title}
 
             </li>
@@ -29,7 +31,10 @@ return (
     })}     
     
 </ul>
-<button onClick={Addnote} type=""> ADD  NOTE</button>
+<AddNote NewNote={NewNote}/>
+
+
+
 </>
 );
 
