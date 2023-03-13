@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 
-const AddNote = (props)=>{
+const AddNote = ({NewNote})=>{
 
 const [title,setTitle] = useState('')
 const handleSubmit =(e)=> {
 
     e.preventDefault();
-    props.NewNote (title);
+    NewNote (title);
     setTitle('')
 
 }

@@ -12,7 +12,7 @@ const [notes,setNotes]= useState ([
 ]);
 
 const NewNote = (title)=> {
-    setNotes ([...notes,{id:3 , title: title} ])
+    setNotes ([...notes,{id: notes.length+1, title: title} ])
 }
 
 return (
