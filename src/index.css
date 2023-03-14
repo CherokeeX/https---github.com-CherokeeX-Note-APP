@@ -20,3 +20,53 @@ body{
   background-color: var(--primary-color);
   color: whitesmoke ;
 }
+
+.container{
+  max-width: 700px;
+  width: 90%;
+  margin: 30px auto;
+  background-color: rgba(0,0,0,0.3);
+
+
+}
+
+
+.navbar{
+padding: 10px 20px;
+text-align: center;
+background-color: rgba(0,0,0,0.3);
+margin-bottom: 20px;
+}
+
+.navbar h1 {
+margin: 10px 0;
+
+}
+ 
+.note-list {
+
+  margin: 20px;
+}
+
+.note-list ul {
+
+  list-style-type: none;
+}
+
+.note-list li {
+
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 20px 0px;
+}
+.note-list.title {
+  font-size: 20px;
+  color:red;
+}
+
+.note-list li:hover{
+  text-decoration: line-through;
+  
+}
