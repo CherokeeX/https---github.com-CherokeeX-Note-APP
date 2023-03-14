@@ -61,12 +61,45 @@ margin: 10px 0;
   cursor: pointer;
   margin: 20px 0px;
 }
-.note-list.title {
+.note-list title {
   font-size: 20px;
   color:red;
 }
 
 .note-list li:hover{
   text-decoration: line-through;
+
+}
+
+.note-list p {
+
+  font-size: 18px;
+  font-style: italic;
+}
+
+form {
+  padding: 20px;
   
 }
+
+input[type="text"]{
+
+  width: 100%;
+  margin: 5px 0 ;
+  padding: 10px;
+  background-color: rgba(0,0,0,0.3);
+  border: 0;
+  color: #fff;
+
+}
+
+input[type="submit"]{
+  margin: 10px auto;
+  display: block;
+  color: #fff;
+  border: 0;
+  padding: 6px 20px ;
+  background-color: var(--secondary-color);
+
+}
+
