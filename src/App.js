@@ -1,8 +1,8 @@
-import Notelist from  './companents/Notelist';
+
 
   
 
-
+/*
 function App(props) {
 
 return(
@@ -20,3 +20,4 @@ return(
   
 }
 export default App;
+*/

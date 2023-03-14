@@ -1,29 +1,24 @@
 import { useState } from "react";
 
+const AddNote = ({ newNote }) => {
 
-const AddNote = ({NewNote})=>{
+    const [title, setTitle] = useState('');
 
-const [title,setTitle] = useState('')
-const handleSubmit =(e)=> {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        newNote(title);
+        setTitle('');
+    }
 
-    e.preventDefault();
-    NewNote (title);
-    setTitle('')
-
-}
-return (
-
-<form onSubmit={ handleSubmit }>
-    <label for="title">Title</label>
-    <input type="text"  value={title} onChange ={(e)=>setTitle(e.target.value)}/> 
-    <input type="submit" name="" value="Add Note" />
-</form>
-
-
-);
+    return (
+        <form onSubmit={ handleSubmit }>
+            <label htmlFor="title">Title</label>
+            <input type="text"  value={title} onChange={ (e) => setTitle(e.target.value) } />
+            <input type="submit" value="Add Note" />
+        </form>
+    );
 
 
 }
 
-
-export default AddNote ; 
+export default AddNote;
