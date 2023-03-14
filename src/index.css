@@ -104,7 +104,8 @@ input[type="submit"]{
 }
 
 .empty {
-  background-color: rgba(0,0,0,0.3);
-  align-items: center;
+  background-color: var(--secondary-color);
+  padding: 10px;
+  margin: 20px;
   text-align: center;
 }
