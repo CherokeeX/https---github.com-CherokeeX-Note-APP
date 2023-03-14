@@ -1,7 +1,7 @@
-const Note = ({note})=> {
+const Note = ({note , removeNote})=> {
 
 return (
-    <li key={note.id}>{ note.title }</li>
+    <li onClick={()=>removeNote (note.id) } key={note.id}>{ note.title }</li>
 );
 
 }

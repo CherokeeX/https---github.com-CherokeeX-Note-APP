@@ -22,9 +22,16 @@ const NoteApp = () => {
         localStorage.setItem("notes", JSON.stringify(notes));
     }, [notes]);
 
-    const newNote = (title) => {
-        setNotes([...notes, { id: notes.length + 1, title: title }]);
+    const newNote = (title ,description) => {
+        setNotes([...notes, { id: notes.length + 1, title: title , description : description}]);
     }
+
+
+const removeNote = (id)=> {
+  setNotes(notes.filter((note)=>note.id !== id));
+
+}
+
 
     return (
     
@@ -32,7 +39,7 @@ const NoteApp = () => {
                 
             
             <Navbar notes={notes} />
-            <NoteLists notes = {notes} />
+            <NoteLists notes = {notes} removeNote={removeNote} />
             <AddNote newNote={newNote }/>
             
             </div>
